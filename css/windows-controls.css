@@ -1,0 +1,49 @@
+/*
+Windows Contols
+*/
+:root
+{
+    --color-1: #F5F6F7;
+    --color-1-border: #D6D6D6;
+    --color-1-hover: #D5E7F8;
+    --color-1-border-hover: #7AB1E8;
+
+}
+
+/*
+Windows menu
+*/
+.windows-menu
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.windows-menu
+{
+    width: 100%;
+
+    list-style: none;
+
+    background-color: var(--color-1);
+    border-bottom: 1px solid var(--color-1-border);
+}
+
+.windows-menu li, .windows-menu-title
+{
+    cursor: default;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    background-color: var(--color-1);
+    border: 1px solid var(--color-1);
+}
+
+.menu li:hover, .windows-menu-title:hover
+{
+    background-color: var(--color-1-hover);
+    border: 1px solid var(--color-1-border-hover);
+}

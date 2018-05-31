@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" href="img/favico.png" />
+    <link rel="stylesheet" type="text/css" href="css/ipfs-notepad.css">
+    <link rel="stylesheet" type="text/css" href="css/windows-controls.css">
+
+    <title>IPFS - notepad</title>
+</head>
+
+<body>
+
+    <div id="ipfs-notepad-app">
+
+        <ul id="ipfs-notepad-menu-container" class="windows-menu">
+            <li class="windows-menu-title">File</li>
+            <li class="windows-menu-title">Edit</li>
+            <li class="windows-menu-title">Format</li>
+            <li class="windows-menu-title">View</li>
+            <li class="windows-menu-title">Help</li>
+        </ul>
+
+        <textarea id="ipfs-notepad-textarea" v-model="file" class="" wrap="off"></textarea>
+
+        <div id="ipfs-notepad-statusbar-container" class=""></div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/windows-forms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/ipfs-notepad.js"></script>
+
+</body>
+
+</html>
