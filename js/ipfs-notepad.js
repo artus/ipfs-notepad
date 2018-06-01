@@ -1,4 +1,4 @@
-const IPFS_README_FILE_URL = "/ipfs/QmVLDAhCY3X9P2uRudKAryuQFPM5zqA3Yij1dY8FpGbL7T/readme";
+const IPFS_README_FILE_URL = "/ipfs/QmVLDAhCY3X9P2uRudKAryuQFPM5zqA3Yij1dY8FpGbL7T/about";
 
 let ipfsNotepadApp = new Vue({
     el: '#ipfs-notepad-app',
