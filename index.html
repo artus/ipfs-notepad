@@ -15,33 +15,57 @@
 
     <div id="ipfs-notepad-app">
 
-        <ul id="ipfs-notepad-menu-container" class="windows-menu">
-            <li class="windows-menu-title">File</li>
-            <li class="windows-menu-title">Edit</li>
-            <li class="windows-menu-title">Format</li>
-            <li class="windows-menu-title">View</li>
-            <li class="windows-menu-title">Help</li>
+        <!-- Dropdown menu's -->
+        <ul id="file-menu" class="windows-dropdown-menu">
+            <li v-on:click="newFile()">New</li>
+            <li v-on:click="openFile()">Open...</li>
+            <li data-enabled="false">Save</li>
+            <li v-on:click="saveFile()">Save As...</li>
+            <li class="windows-dropdown-menu-divider"></li>
+            <li data-enabled="false">Page Setup...</li>
+            <li data-enabled="false">Print...</li>
+            <li class="windows-dropdown-menu-divider"></li>
+            <li v-on:click="exitApp()">Exit...</li>
         </ul>
 
-        <textarea id="ipfs-notepad-textarea" v-model="file" class="" wrap="off"></textarea>
+        <ul id="edit-menu" class="windows-dropdown-menu">
+            <li>Undo</li>
+            <li>Redo</li>
+        </ul>
+
+        <ul id="format-menu" class="windows-dropdown-menu">
+            <li>Oops</li>
+        </ul>
+
+        <!-- Menu bar -->
+        <ul id="ipfs-notepad-menu-container" class="windows-menu">
+            <li id="file-menu-title" data-active="false" data-dropdown-id="file-menu" class="windows-menu-title">File</li>
+            <li id="edit-menu-title" data-enabled="false" data-active="false" data-dropdown-id="edit-menu" class="windows-menu-title">Edit</li>
+            <li id="format-menu-title" data-enabled="false" data-active="false" data-dropdown-id="format-menu" class="windows-menu-title">Format</li>
+            <li id="view-menu-title" data-enabled="false" data-active="false" data-dropdown-id="view-menu" class="windows-menu-title">View</li>
+            <li id="help-menu-title" data-enabled="false" data-active="false" data-dropdown-id="help-menu" class="windows-menu-title">Help</li>
+        </ul>
+
+        <textarea id="ipfs-notepad-textarea" v-model="file" class="" wrap="off" readonly="true"></textarea>
 
         <div id="ipfs-notepad-statusbar-container" class=""></div>
 
     </div>
 
+    <!-- buffer -->
+    <script src="js/buffer.js"></script>
+
     <!-- ipfs -->
     <script src="https://unpkg.com/ipfs/dist/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
     <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <!-- Custom scripts -->
-    <script src="js/windows-forms.js"></script>
     <script src="js/ipfs-notepad.js"></script>
+
+    <!-- Windows forms -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/windows-forms.js"></script>
 
 </body>
 
