@@ -45,12 +45,16 @@ let ipfsNotepadApp = new Vue({
             this.file = "";
         },
         openFile() {
-            alert("Not implemented yet.");
+            let fileName = prompt("Enter filename:");
+            if (fileName != null && typeof fileName != "undefined" && fileName != "") {
+                this.loadFile(fileName);
+            }
+            else this.log("Invalid filename.");
         },
         saveFile() {
             let fileName = prompt("Enter filename:");
 
-            if (typeof fileName != "undefined" && fileName != "") {
+            if (fileName != null && typeof fileName != "undefined" && fileName != "") {
                 log (`Attempting to save file to ${fileName}.`);
                 this.node.files.add({
                     path: fileName,
